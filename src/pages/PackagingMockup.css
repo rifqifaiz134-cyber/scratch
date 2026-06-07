@@ -1,0 +1,255 @@
+.preview-container {
+  padding: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: repeating-linear-gradient(
+    45deg,
+    var(--surface-container-lowest),
+    var(--surface-container-lowest) 10px,
+    var(--surface-container) 10px,
+    var(--surface-container) 20px
+  );
+  overflow: hidden;
+  min-height: 200px;
+}
+
+.aspect-ratio-wrapper {
+  width: 100%;
+  max-width: 100%;
+  max-height: 50vh;
+  position: relative;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  background: white;
+  overflow: hidden;
+}
+
+.mockup-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: white;
+  display: flex;
+}
+
+/* Template Typography & Commons */
+.m-text {
+  font-family: 'Arial', sans-serif;
+  color: #333;
+}
+.title-small {
+  font-weight: bold;
+  font-size: 1.2cqw;
+  margin-bottom: 2%;
+  color: var(--primary);
+  text-transform: uppercase;
+}
+.desc {
+  font-size: 1cqw;
+  line-height: 1.4;
+}
+
+/* Container Queries for responsive sizing relative to parent */
+.mockup-template {
+  container-type: inline-size;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  box-sizing: border-box;
+}
+
+/* SIRUP (3 Columns) */
+.sirup-template {
+  border: 1px solid #e0e0e0;
+}
+.sirup-template .section-left,
+.sirup-template .section-right {
+  flex: 1;
+  padding: 3%;
+  display: flex;
+  flex-direction: column;
+  background: #f9fdfa;
+}
+.sirup-template .section-center {
+  flex: 2;
+  padding: 3%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-left: 2px solid var(--primary-container);
+  border-right: 2px solid var(--primary-container);
+  background: white;
+  text-align: center;
+}
+.sirup-template .brand-logo {
+  font-size: 1.5cqw;
+  font-weight: bold;
+  color: var(--primary);
+  letter-spacing: 2px;
+  margin-bottom: auto;
+}
+.sirup-template .brand-name {
+  font-size: 6cqw;
+  font-weight: 900;
+  color: #1a1a1a;
+  letter-spacing: 1px;
+}
+.sirup-template .brand-generic {
+  font-size: 1.5cqw;
+  color: #666;
+  margin-top: 1%;
+}
+.sirup-template .brand-netto {
+  font-size: 1.8cqw;
+  font-weight: bold;
+  color: #333;
+  margin-top: auto;
+}
+.mt-auto { margin-top: auto; }
+
+/* TABLET (Box Layout) */
+.tablet-template {
+  flex-direction: column;
+  padding: 4%;
+  background: linear-gradient(135deg, white 0%, #f0f7f4 100%);
+  position: relative;
+  justify-content: space-between;
+}
+.tablet-template .brand-circle {
+  position: absolute;
+  top: 5%;
+  right: 5%;
+  width: 15cqw;
+  height: 15cqw;
+  border-radius: 50%;
+  background: var(--primary-container);
+  opacity: 0.5;
+}
+.tablet-template .brand-name {
+  font-size: 8cqw;
+  font-weight: 900;
+  color: var(--primary);
+  margin-bottom: 2%;
+}
+.tablet-template .brand-generic {
+  font-size: 2.5cqw;
+  font-weight: 600;
+  color: #444;
+}
+.tablet-template .tablet-footer {
+  display: flex;
+  justify-content: space-between;
+  border-top: 2px solid var(--primary);
+  padding-top: 2%;
+  font-size: 2cqw;
+  font-weight: bold;
+}
+
+/* SALEP (Tube Layout) */
+.salep-template {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+}
+.salep-cap-area {
+  flex: 1;
+  background: #ccc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2cqw;
+  font-weight: bold;
+  color: white;
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+}
+.salep-body {
+  flex: 6;
+  background: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 4%;
+  position: relative;
+}
+.salep-body .brand-name {
+  font-size: 6cqw;
+  font-weight: 900;
+  color: var(--primary);
+}
+.salep-body .brand-generic {
+  font-size: 2.5cqw;
+  color: #666;
+  margin-top: 1%;
+}
+.salep-body .brand-netto {
+  position: absolute;
+  bottom: 5%;
+  right: 5%;
+  font-size: 2cqw;
+  font-weight: bold;
+}
+.salep-crimp {
+  flex: 0.5;
+  background: #eee;
+  background-image: repeating-linear-gradient(90deg, transparent, transparent 2px, #ccc 2px, #ccc 4px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5cqw;
+  writing-mode: vertical-rl;
+}
+
+/* VIAL / AMPUL (Vertical Label) */
+.vial-template {
+  flex-direction: column;
+  background: white;
+  border: 1px solid #ccc;
+}
+.vial-top {
+  flex: 1;
+  background: var(--primary-container);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 2px solid var(--primary);
+}
+.vial-top .title-small {
+  margin: 0;
+  font-size: 2cqw;
+}
+.vial-middle {
+  flex: 3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 5%;
+}
+.vial-middle .brand-name {
+  font-size: 5cqw;
+  font-weight: 900;
+  color: #222;
+}
+.vial-middle .brand-generic {
+  font-size: 2.5cqw;
+  color: #666;
+  margin-top: 2%;
+}
+.vial-bottom {
+  flex: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding: 3%;
+  background: #f9f9f9;
+  border-top: 1px solid #eee;
+}
+.vial-bottom .desc {
+  font-size: 2cqw;
+  font-weight: bold;
+}
