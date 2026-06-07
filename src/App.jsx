@@ -37,7 +37,7 @@ function AppContent() {
 
 function App() {
   return (
-    <Router>
+    <Router basename="/scratch/">
       <AppContent />
     </Router>
   );
